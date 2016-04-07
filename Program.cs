@@ -10,6 +10,11 @@ namespace NetflixProject
     {
         static void Main(string[] args)
         {
+            Action testAction = new Action();
+            testAction.NameActionMovies();
+            Genre testGenre = new Genre();
+            testGenre.PrintAction();
+            Console.ReadKey();
         }
     }
 }
