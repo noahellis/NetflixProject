@@ -8,34 +8,41 @@ namespace NetflixProject
 {
     class Genre
     {
-        
-        List<Title> titleList = new List<Title>();
-        public List<Action> actionList = new List<Action>();
-        public List<Romance> romanceList = new List<Romance>();
-        public List<Comedy> comedyList = new List<Comedy>();
-        
-        public Genre (string title, double rating)
+        public List<Title> titleList;
+        public string genreType;
+        Title useTitle = new Title();
+        public void AddTitle(Title title)
         {
+            
+        }
+        //public List<Title> actionMovieList = new List<Title>();
+        //public List<Title> romanceMovieList = new List<Title>();
+        //public List<Title> comedyMovieList = new List<Title>();
+        //public Genre (string title, double rating, int lenghtInMinutes)
+        //{
+        //    //List<Title> titleList = new List<Title>();
+        //    //List<Action> actionList = new List<Action>();
+        //    //List<Romance> romanceList = new List<Romance>();
+        //    //List<Comedy> comedyList = new List<Comedy>();
+        //}
+        //public Genre()
+        //{
 
-        }
-        public Genre()
-        {
-
-        }
-        public enum Genres
-        {            
-            All =0,
-            Romance=1,
-            Comedy=2,
-            Action=4,
-        }       
-        public void PrintAction()
-        {
-            foreach (Action movie in actionList)
-            {
-                Console.WriteLine(movie);
-            }
-        }
+        //}
+        //public enum Genres
+        //{            
+        //    All =0,
+        //    Romance=1,
+        //    Comedy=2,
+        //    Action=4,
+        //}       
+        //public void PrintAction()
+        //{
+        //    foreach (Action movie in actionList)
+        //    {
+        //        Console.WriteLine(movie);
+        //    }
+        //}
         //public static Genre operator + (Genre Comedy, Genre Romance)
         //{
         //    Genre romCom = new Genre();

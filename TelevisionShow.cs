@@ -8,7 +8,8 @@ namespace NetflixProject
 {
     class TelevisionShow : Title
     {
-        public TelevisionShow()
+        
+        public TelevisionShow(string showName, double rating, int lengthInMinutes ):base(showName, rating)
         {
             List<Episode> episodeList = new List<Episode>();
         }
