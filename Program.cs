@@ -10,9 +10,9 @@ namespace NetflixProject
     {
         static void Main(string[] args)
         {
-            View testView = new View();
-            testView.ChoosePrintGenre();
-            Console.ReadKey();
+            //View testView = new View();
+            //testView.ChoosePrintGenre();
+            //Console.ReadKey();
         }
     }
 }

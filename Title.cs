@@ -10,12 +10,12 @@ namespace NetflixProject
     {
         //public Genre titleGenre = new Genre();
         public string name;
-        public int rating;
+        public double rating;
         public Title()
         {
 
         }
-        public Title(string title, double rating)
+        public Title(string name, double rating)
         {
 
         }

@@ -11,6 +11,10 @@ namespace NetflixProject
         public List<Title> titleList;
         public string genreType;
         Title useTitle = new Title();
+        public Genre (string Genre)
+        {
+
+        }
         public void AddTitle(Title title)
         {
             
