@@ -8,19 +8,43 @@ namespace NetflixProject
 {
     class TelevisionShow : Title
     {
-        
-        public TelevisionShow(string showName, double rating, int lengthInMinutes ):base(showName, rating)
+        ////        Show(inherits from Title)
+        ////-    Contains a list of Episodes
+        ////-    Overrides parent’s Rating to return an aggregated rating of Episode ratings
+        ////-    Overrides ToString() method to return a string of the name of the show and number of episodes
+        //public List<Episode> seasonList = new List<Episode>();
+        public List<List<Episode>> seasonList = new List<List<Episode>>();
+        public int numberOfSeasons { get; set; }
+        public int numberOfEpisodes { get; set; }
+        public int totalEpisodes; 
+        public string ShowName { get; set; }
+        public int LenghtInMinutes { get; set; }
+        public TelevisionShow(string showName, double rating, int lengthInMinutes ):base(showName, rating,lengthInMinutes)
         {
-            List<Episode> episodeList = new List<Episode>();
+            lengthInMinutes = LenghtInMinutes;
+            showName = ShowName;
+            totalEpisodes = numberOfEpisodes * numberOfSeasons;
         }
-        public void InputNewShow()
+        public TelevisionShow()
         {
 
         }
-        //public override double CalculateAverageRating()
-        //{
-        //    Title average = episodeList?[0];
-        //    return base.CalculateAverageRating();
-        //}
+        public override string ToString()
+        {
+            return "Television Show Info:" + ShowName +" " + totalEpisodes;
+        }
+        public void CreateSeasonList(int numberOfEpisodes, int numberOfSeasons)
+        {
+            for (int seasonIndex = 0; seasonIndex <= numberOfSeasons; seasonIndex++)
+            {
+                List<Episode> episodeList = new List<Episode>();
+                for (int episodeIndex = 0; episodeIndex <= numberOfEpisodes; episodeIndex++)
+                {                                       
+                     episodeList.Add(new Episode());                    
+                }
+                seasonList.Add(episodeList);
+            }
+        }
+
     }
 }
