@@ -20,6 +20,7 @@ namespace NetflixProject
         ////-Create the genres: All, Romance, Action, Comedy.They need to share some titles(such as Romantic Comedies)
         ////by reference, not by duplicating the title itself.
         public List<Title> titleList = new List<Title>();
+        public Catalog catalogAccess = new Catalog();
         public string genreType;
         public Genre mixedGenre;
         public Genre genre1;
@@ -34,9 +35,10 @@ namespace NetflixProject
         {
             
         }
-        public void AddTitle(Title title)
+        public static Genre operator +(Genre genre1, Genre genre2)
         {
-            
+            Genre aggregatedGenre = new Genre();
+            return aggregatedGenre;
         }
         public IEnumerator GetEnumerator()
         {
@@ -46,44 +48,6 @@ namespace NetflixProject
             }
             yield return "End of List";
         }
-        //public static Genre operator + (Genre genre1, Genre genre2)
-        //{
-        //    Genre romanticComedy = genre1.Comedy + genre2.Romance;
-        //    return new Genre(romanticComedy);
-        //}
-        //public List<Title> actionMovieList = new List<Title>();
-        //public List<Title> romanceMovieList = new List<Title>();
-        //public List<Title> comedyMovieList = new List<Title>();
-        //public Genre (string title, double rating, int lenghtInMinutes)
-        //{
-        //    //List<Title> titleList = new List<Title>();
-        //    //List<Action> actionList = new List<Action>();
-        //    //List<Romance> romanceList = new List<Romance>();
-        //    //List<Comedy> comedyList = new List<Comedy>();
-        //}
-        //public Genre()
-        //{
 
-        //}
-        //public enum Genres
-        //{            
-        //    All =0,
-        //    Romance=1,
-        //    Comedy=2,
-        //    Action=4,
-        //}       
-        //public void PrintAction()
-        //{
-        //    foreach (Action movie in actionList)
-        //    {
-        //        Console.WriteLine(movie);
-        //    }
-        //}
-        //public static Genre operator + (Genre Comedy, Genre Romance)
-        //{
-        //    Genre romCom = new Genre();
-        //    romCom = Comedy.comedyList + Romance.romanceList;
-        //    return romCom;
-        //}
     }
 }

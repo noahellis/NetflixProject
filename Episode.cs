@@ -15,11 +15,7 @@ namespace NetflixProject
         public Episode(double episodeRating)
         {
 
-        }
-    
-        //public static Episode Parse(string input)
-        //{
-        //    return new Episode(input);
-        //}
+        }   
+
     }
 }

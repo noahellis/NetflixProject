@@ -8,21 +8,11 @@ namespace NetflixProject
 {
     class TelevisionShow : Title
     {
-        ////        Show(inherits from Title)
-        ////-    Contains a list of Episodes
-        ////-    Overrides parent’s Rating to return an aggregated rating of Episode ratings
-        ////-    Overrides ToString() method to return a string of the name of the show and number of episodes
-        //public List<Episode> seasonList = new List<Episode>();
         public List<Episode> episodeList = new List<Episode>();
-        
-        public int numberOfEpisodes; 
-        public int totalEpisodes;
         public string showName;
-        public int lenghtInMinutes;
-        public double rating;
+        public int totalEpisodes;      
         public double ratingAverageHolder;
         public double averageRating;
-        public double randomRating;
         public TelevisionShow(string ShowName, double Rating, int LengthInMinutes, int TotalEpisodes):base(ShowName, Rating, LengthInMinutes)
         {
             lenghtInMinutes = LengthInMinutes;
@@ -48,22 +38,10 @@ namespace NetflixProject
         }
         public override string ToString()
         {
-            
-            return "Television Show Info: " + showName +" " + totalEpisodes + " total episodes";
+            string show = String.Format("The title of the show is {0} and there are {1} episodes", showName, totalEpisodes);
+            Console.WriteLine(show);
+            return show;
         }
-        //public void CreateSeasonList(int numberOfEpisodes, int numberOfSeasons)
-        //{
-        //    for (int seasonIndex = 0; seasonIndex < numberOfSeasons; seasonIndex++)
-        //    {
-        //        List<Episode> episodeList = new List<Episode>();
-        //        for (int episodeIndex = 0; episodeIndex < numberOfEpisodes; episodeIndex++)
-        //        {                                       
-        //             episodeList.Add(new Episode());                    
-        //        }
-        //        seasonList.Add(episodeList);
-        //    }
-            
-        //}
 
     }
 }
