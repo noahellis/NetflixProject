@@ -20,13 +20,12 @@ namespace NetflixProject
         ////-Create the genres: All, Romance, Action, Comedy.They need to share some titles(such as Romantic Comedies)
         ////by reference, not by duplicating the title itself.
         public List<Title> titleList = new List<Title>();
-        public Catalog catalogAccess = new Catalog();
+        
         public string genreType;
         public Genre mixedGenre;
         public Genre genre1;
         public Genre genre2;
-        //Catalog getCatalog = new Catalog();
-        //Title useTitle = new Title();
+
         public Genre (string Genre)
         {
 
@@ -45,6 +44,7 @@ namespace NetflixProject
             for(int titleIndex = 0; titleIndex <titleList.Count; titleIndex++)
             {
                 yield return titleList[titleIndex];
+                
             }
             yield return "End of List";
         }

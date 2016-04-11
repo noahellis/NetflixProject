@@ -9,10 +9,10 @@ namespace NetflixProject
     class Catalog
     {
         List<Genre> genres;
-        Genre Comedy = new Genre("Comedy");
-        Genre Romance = new Genre("Romance");
-        Genre Action = new Genre("Action");
-        Genre All = new Genre("All");
+        public Genre Comedy = new Genre("Comedy");
+        public Genre Romance = new Genre("Romance");
+        public Genre Action = new Genre("Action");
+        public Genre All = new Genre("All");
         public void AddComedyMovie()
         {
             Comedy.titleList.Add(new Movie("The Little Rascals", 4.5, 82));
