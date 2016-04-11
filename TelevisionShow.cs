@@ -13,38 +13,57 @@ namespace NetflixProject
         ////-    Overrides parent’s Rating to return an aggregated rating of Episode ratings
         ////-    Overrides ToString() method to return a string of the name of the show and number of episodes
         //public List<Episode> seasonList = new List<Episode>();
-        public List<List<Episode>> seasonList = new List<List<Episode>>();
-        public int numberOfSeasons { get; set; }
-        public int numberOfEpisodes { get; set; }
-        public int totalEpisodes; 
-        public string ShowName { get; set; }
-        public int LenghtInMinutes { get; set; }
-        public TelevisionShow(string showName, double rating, int lengthInMinutes ):base(showName, rating,lengthInMinutes)
+        public List<Episode> episodeList = new List<Episode>();
+        
+        public int numberOfEpisodes; 
+        public int totalEpisodes;
+        public string showName;
+        public int lenghtInMinutes;
+        public double rating;
+        public double ratingAverageHolder;
+        public double averageRating;
+        public double randomRating;
+        public TelevisionShow(string ShowName, double Rating, int LengthInMinutes, int TotalEpisodes):base(ShowName, Rating, LengthInMinutes)
         {
-            lengthInMinutes = LenghtInMinutes;
+            lenghtInMinutes = LengthInMinutes;
             showName = ShowName;
-            totalEpisodes = numberOfEpisodes * numberOfSeasons;
+            rating = Rating;
+            totalEpisodes = TotalEpisodes;
+            
         }
         public TelevisionShow()
         {
 
         }
+        public double AggrigateEpisodeRating()
+        {
+
+            for (int episodeIndex = 0; episodeIndex < totalEpisodes; episodeIndex++)
+            {
+                Random randomRating = new Random();                
+                ratingAverageHolder += randomRating.Next(1, 6);
+            }
+            averageRating = ratingAverageHolder / totalEpisodes;
+            return averageRating;
+        }
         public override string ToString()
         {
-            return "Television Show Info:" + ShowName +" " + totalEpisodes;
+            
+            return "Television Show Info: " + showName +" " + totalEpisodes + " total episodes";
         }
-        public void CreateSeasonList(int numberOfEpisodes, int numberOfSeasons)
-        {
-            for (int seasonIndex = 0; seasonIndex <= numberOfSeasons; seasonIndex++)
-            {
-                List<Episode> episodeList = new List<Episode>();
-                for (int episodeIndex = 0; episodeIndex <= numberOfEpisodes; episodeIndex++)
-                {                                       
-                     episodeList.Add(new Episode());                    
-                }
-                seasonList.Add(episodeList);
-            }
-        }
+        //public void CreateSeasonList(int numberOfEpisodes, int numberOfSeasons)
+        //{
+        //    for (int seasonIndex = 0; seasonIndex < numberOfSeasons; seasonIndex++)
+        //    {
+        //        List<Episode> episodeList = new List<Episode>();
+        //        for (int episodeIndex = 0; episodeIndex < numberOfEpisodes; episodeIndex++)
+        //        {                                       
+        //             episodeList.Add(new Episode());                    
+        //        }
+        //        seasonList.Add(episodeList);
+        //    }
+            
+        //}
 
     }
 }

@@ -10,11 +10,17 @@ namespace NetflixProject
     {
         static void Main(string[] args)
         {
-            TelevisionShow testShow = new TelevisionShow { ShowName = "30 Rock", rating = 5,};
-            testShow.CreateSeasonList(22,10);
+            TelevisionShow testShow = new TelevisionShow("30 Rock", 3, 22, 20);
+            testShow.AggrigateEpisodeRating();
+
+            //Movie movie = new Movie();
+            //movie.AddActionMovie();
             //View testView = new View();
+            //testView.AddActionMovie();
+            //testView.DisplayAction();
             //testView.ChoosePrintGenre();
-            Console.WriteLine(testShow);
+            //Console.WriteLine(testShow);
+
             Console.ReadKey();
         }
     }

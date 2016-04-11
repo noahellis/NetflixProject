@@ -8,18 +8,17 @@ namespace NetflixProject
 {
     class View
     {
-////        View
-////-    Prints out the various Genres and their Titles
+        ////        View
+        ////-    Prints out the various Genres and their Titles
 
-        //List<Genre> genres;
+        
         //Genre Comedy = new Genre("Comedy");
         //Genre Romance = new Genre("Romance");
         //Genre Action = new Genre("Action");
         //Genre All = new Genre("All");
-        public void DisplayGenres()
-        {
+        //Genre genreAccess = new Genre();
+        //public IEnumerable<Title> titleList { get; set; }
 
-        }
         public void AddGenre(Genre genre)
         {
            
@@ -52,7 +51,15 @@ namespace NetflixProject
         //    Action.titleList.Add(new Movie("Sin City", 4, 147));
         //    Action.titleList.Add(new Movie("2001: A Space Odyssey", 4, 161));
         //}
-   
+        //public void DisplayAction()
+        //{
+        //    foreach (Title title in Action.titleList)
+        //    {
+        //        Console.WriteLine("Genre: {0}, Title: {1} ", "Action", title);
+        //    }
+
+        //}
+
         public void AddComedyShow()
         {
 

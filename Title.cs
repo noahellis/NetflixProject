@@ -30,12 +30,14 @@ namespace NetflixProject
         {
 
         }
-        public static Title operator +(Title a, Title b)
+        public static Genre operator +(Title a, Title b)
         {
             a.name = "The Little Rascals";
             b.name = "Django Unchained";
-            Title ActionComedy = new Title();
-            return new Title(a.name, b.name);
+            Genre aggregatedGenre = new Genre();
+            aggregatedGenre.titleList.Add(a);
+            aggregatedGenre.titleList.Add(b);
+            return aggregatedGenre;
         }
         public override string ToString()
         {

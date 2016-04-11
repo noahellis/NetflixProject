@@ -8,16 +8,15 @@ namespace NetflixProject
 {
     class Episode
     {
-////        Episode
-////-    Rating field
+        ////        Episode
+        ////-    Rating field
+        public double aggregatedRating;
+        
         public Episode(double episodeRating)
         {
 
         }
-        public Episode()
-        {
-
-        }
+    
         //public static Episode Parse(string input)
         //{
         //    return new Episode(input);
