@@ -26,8 +26,8 @@ namespace NetflixProject
             a.name = "The Little Rascals";
             b.name = "Django Unchained";
             Genre aggregatedGenre = new Genre();
-            aggregatedGenre.titleList.Add(a);
-            aggregatedGenre.titleList.Add(b);
+            aggregatedGenre.TitleList.Add(a);
+            aggregatedGenre.TitleList.Add(b);
             return aggregatedGenre;
         }
 

@@ -19,13 +19,24 @@ namespace NetflixProject
         ////o For example, title Die Hard and genre Comedy would return a list of all comedy films and Die Hard.
         ////-Create the genres: All, Romance, Action, Comedy.They need to share some titles(such as Romantic Comedies)
         ////by reference, not by duplicating the title itself.
-        public List<Title> titleList = new List<Title>();
+        List<Title> titleList = new List<Title>();
         
         public string genreType;
         public Genre mixedGenre;
         public Genre genre1;
         public Genre genre2;
 
+        public List<Title> TitleList
+        {
+            get
+            {
+                return titleList;
+            }
+            set
+            {
+                titleList = value;
+            }
+        }
         public Genre (string Genre)
         {
 

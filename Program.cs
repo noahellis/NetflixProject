@@ -20,11 +20,8 @@ namespace NetflixProject
             //testView.ChoosePrintGenre();
             //Console.WriteLine(testShow);
             Catalog testCatalog = new Catalog();
-            testCatalog.AddActionMovie();
-            testCatalog.AddComedyMovie();
-            testCatalog.AddRomanceMovie();
             View testView = new View();
-            testView.ToString();
+            testView.PrintAction();
 
             Console.ReadKey();
         }
